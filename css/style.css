@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,200..700;1,200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    font-family: "Cabin", sans-serif;
+}
+
+html, body{
+    height:100%;
+    width:100%;
+}
+
+.contaienr{
+    height: 100vh;
+    width: 100%;
+}
+
+
+.container{
+    max-width:1300px;
+    width:90%;
+    margin:0 auto;
+}
+
+
+.container nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    
+}
+
+.container nav .logo{
+    height: 60px;
+    width: 60px;
+    background-color: #304756;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    /* padding:25px; */
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    margin: 20px;
+}
+
+/* .container nav .logo img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+} */
+
+
+.links ul{ 
+    display: flex;
+    gap: 20px;
+
+}
+
+.links ul  button{
+    font-size: 14px;
+    padding: 17px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+   
+}
+
+.links ul  button:nth-child(1){
+    background-color: #4AB7E6;
+}
+.links ul  button:nth-child(2){
+    background-color: #80CDB2;
+}
+.links ul  button:nth-child(3){
+    background-color: orange;
+}
+.links ul  button:nth-child(4){
+    background-color: lightgreen;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.body{
+    position: relative;
+}
+.content video{
+    position: absolute;
+
+    width: 70%;
+   
+    z-index: -10;
+    right: 0;
+    bottom: 0;
+    
+
+
+}
+
+.content .title{
+    height: 80vh;
+     width: 40%; 
+     padding: 20px 0;
+     
+
+}
+
+.content .title h1{
+    font-size: 50px;
+    line-height: 50px;
+    margin: 30px 0;
+}
+
+.content .title p{
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+
+.content .title button{
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: lightcoral;
+    margin: 10px 0;
+}
+
+
+.content .side{
+    height: 100vh;
+    width: 600px;
+    background-color: rgb(236, 236, 236);
+    position: absolute;
+    z-index: -1;
+    transform: skewX(160deg) ;
+    transform-origin: 100% 0;
+    left: 0;
+    top:0;
+}
+
+.links button a{
+    text-decoration: none;
+    color: white;
+
+}
+
+button a{
+    text-decoration: none;
+    color: wheat;
+}

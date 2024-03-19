@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./logic/calculator.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class='logo'>FT</div>
+            <div class="links">
+                <ul>
+                    <button ><a href="./index.html">Home</a></button>
+                    <button class="lessons"><a href="./lessons.html">Lessons</a></button>
+                    <button ><a href="./news.html">News</a></button>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="data">
+                <h3 style="font-size: 30px; padding-bottom:10px;">Loan/EMI calculator</h3>
+                <p>Input your loan amount , loan duration , lone interest </p>
+
+                <label for="amount">Lone amount(in Rupees)</label><br>
+                <input type="text" id="amount" placeholder="₹10000"><br>
+
+                <label for="interest">Intreset</label><br>
+                <input type="text" id="interest" placeholder="4%"><br>
+
+                <label for="duration">Lone Duration</label><br>
+                <input type="text" id="duration" placeholder="6 Months">
+            </div>
+            <div class="values">
+                <div class="left">
+                    <h3>Monthly payment</h3>
+                    <h2 class="monthlyPayment"></h2>
+                </div>
+                <div class="right">
+                    <h3>Total Payment</h3><br>
+                    <h2 class="totalPayment"></h2> <br><br>
+
+                    <h3>Total Intreset</h3>
+                    <h2 class="totalInterest"></h3>
+                </div>
+
+                <button class="calculate" >Calculate</button>
+            </div>
+        </div>
+
+        
+
+
+    </div>
+</body>
+</html>

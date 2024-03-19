@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+html, body{
+    height:100%;
+    width:100%;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+.toc-wrapper{
+    background: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / .24);
+    height: 100vh;
+    /* margin: auto; */
+    width: 25vw;
+    border-radius: 50px;
+    position: fixed;
+    top: 95px;
+}
+
+.blog-wrapper{
+    background: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / .24);
+    height: 100vh;
+    margin-left: 30px;
+    padding: 50px;
+    border-radius: 50px;
+    width: 60vw;
+}
+
+.toc-header{
+    background: #304756;
+    padding: 20px;
+    border-radius: 50px 50px 100px 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.toc-heading{
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+}
+
+
+.toc-list-wrapper{
+    border-radius: 50px 0 52px 52px;
+    height: 80%;
+    overflow: auto; 
+}
+
+.toc-list{
+    border-radius: 0 60px 50px 50px;
+    background: white;
+    margin: 0 ;
+    list-style: none;
+    padding: 30px 10px;
+    
+}
+
+
+.toc-list-item:not(:last-child){
+    margin-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+.toc-list-item{
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+.toc-list-item a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    padding: 10px 10px 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.toc-list-item a:before{
+    content:"";
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    position: absolute;
+    border-radius: 50%;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+
+.lessons{
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    width: 100%
+}
+.modules{
+    width: 25vw;
+    margin: 0;
+}
+
+
+
+
+.toc-list-item a:hover{
+    box-shadow: 0 8px 15px rgb(252, 178, 42);
+    background-color: rgb(255, 195, 83);
+    color: white;
+
+}
+.toc-list-item a:hover::before{
+    background: white;
+}
+
+.toc-list-wrapper .toc-list .heading a{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    letter-spacing: -1.2px;
+   margin-left:-40px;
+    
+}
+
+
+.blog-wrapper p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgb(128, 126, 126);
+}
+.blog-wrapper h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.section{
+    display: none;
+}
+
+#section1{
+    display: block;
+}
