@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,200..700;1,200..700&display=swap');
+
 
 *{
     box-sizing: border-box;
     margin:0px;
     padding:0px;
-    font-family: "Cabin", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 html, body{
@@ -159,4 +159,35 @@ html, body{
 button a{
     text-decoration: none;
     color: wheat;
+}
+
+.calculatorchange button:nth-child(1){
+    font-size: 14px;
+    padding: 17px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    background-color: cornflowerblue;
+    margin-bottom: 5px;
+
+}
+
+.calculatorchange button:nth-child(2){
+    font-size: 14px;
+    padding: 17px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    background-color: lightsalmon;
+    margin-bottom: 5px;
+
+
+}
+
+.calculatorchange a{
+    color: white;
+}
+.calculatorchange{
+    width: 100%;
+    text-align: center;
 }

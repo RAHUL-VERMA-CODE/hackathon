@@ -35,3 +35,4 @@ document.querySelector(".calculate").addEventListener("click", function(event){
     event.preventDefault();
     calculateEMI();
 })
+

@@ -134,22 +134,22 @@ html{
 }
 
 .toc-list-wrapper .toc-list .heading a{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 800;
     color: black;
-    letter-spacing: -1.2px;
+    letter-spacing: -1.0px;
    margin-left:-40px;
     
 }
 
 
 .blog-wrapper p{
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 2px;
     color: rgb(128, 126, 126);
 }
 .blog-wrapper h1{
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 

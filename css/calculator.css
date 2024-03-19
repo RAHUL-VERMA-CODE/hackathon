@@ -48,7 +48,7 @@ html, body{
 }
 
 .main .data label{
-    margin: 15px 0 0  0;
+    margin: 10px 0 0  0;
 }
 
 .main .data .input::placeholder{
@@ -69,7 +69,7 @@ html, body{
 }
 
 .values .right h3{
-    font-size: 25px;
+    font-size: 17px;
 }
 
 .values .left{  
@@ -79,7 +79,7 @@ html, body{
 }
 
 .calculate{
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     height: 70px;
     width: 200px;
@@ -91,3 +91,5 @@ html, body{
     position: absolute;
     bottom: 140px;
 }
+
+

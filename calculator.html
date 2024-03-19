@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/calculator.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/calculator.css">
     <script src="./logic/calculator.js" defer></script>
 </head>
 <body>
@@ -21,18 +25,27 @@
             </div>
         </nav>
 
-        <div class="main">
+
+<!-- button section -->
+        <div class="calculatorchange">
+            <button><a href="#">Loan/EMI calculator</a></button>
+            <button><a href="./budget.html">Budget calculator</a></button>
+        </div>
+
+
+
+        <div class="main " >
             <div class="data">
                 <h3 style="font-size: 30px; padding-bottom:10px;">Loan/EMI calculator</h3>
                 <p>Input your loan amount , loan duration , lone interest </p>
 
-                <label for="amount">Lone amount(in Rupees)</label><br>
+                <label for="amount">Lone amount(in Rupees)</label>
                 <input type="text" id="amount" placeholder="₹10000"><br>
 
                 <label for="interest">Intreset</label><br>
                 <input type="text" id="interest" placeholder="4%"><br>
 
-                <label for="duration">Lone Duration</label><br>
+                <label for="duration">Lone Duration</label>
                 <input type="text" id="duration" placeholder="6 Months">
             </div>
             <div class="values">
@@ -51,6 +64,8 @@
                 <button class="calculate" >Calculate</button>
             </div>
         </div>
+
+        <!-- budget calculator -->
 
         
 
