@@ -12,24 +12,24 @@ const balanceValue = document.getElementById("balance-amount");
 const list = document.getElementById("list");
 let tempAmount = 0;
 
-//Set Budget Part
+// Set Budget Part
 totalAmountButton.addEventListener("click", () => {
   tempAmount = totalAmount.value;
-  //empty or negative input
+  // Empty or negative input
   if (tempAmount === "" || tempAmount < 0) {
     errorMessage.classList.remove("hide");
   } else {
     errorMessage.classList.add("hide");
-    //Set Budget
+    // Set Budget
     amount.innerHTML = tempAmount;
-    //Set Balance
+    // Set Balance
     balanceValue.innerText = tempAmount - expenditureValue.innerText;
-    //Clear Input Box
+    // Clear Input Box
     totalAmount.value = "";
   }
 });
 
-//Function To Disable Edit and Delete Button
+// Function To Disable Edit and Delete Button
 const disableButtons = (bool) => {
   let editButtons = document.getElementsByClassName("edit");
   Array.from(editButtons).forEach((element) => {
@@ -37,7 +37,7 @@ const disableButtons = (bool) => {
   });
 };
 
-//Function To Modify List Elements
+// Function To Modify List Elements
 const modifyElement = (element, edit = false) => {
   let parentDiv = element.parentElement;
   let currentBalance = balanceValue.innerText;
@@ -55,7 +55,7 @@ const modifyElement = (element, edit = false) => {
   parentDiv.remove();
 };
 
-//Function To Create List
+// Function To Create List
 const listCreator = (expenseName, expenseValue) => {
   let sublistContent = document.createElement("div");
   sublistContent.classList.add("sublist-content", "flex-space");
@@ -78,26 +78,79 @@ const listCreator = (expenseName, expenseValue) => {
   document.getElementById("list").appendChild(sublistContent);
 };
 
-//Function To Add Expenses
+// Function To Add Expenses
 checkAmountButton.addEventListener("click", () => {
-  //empty checks
+  // Empty checks
   if (!userAmount.value || !productTitle.value) {
     productTitleError.classList.remove("hide");
     return false;
   }
-  //Enable buttons
+  // Enable buttons
   disableButtons(false);
-  //Expense
+  // Expense
   let expenditure = parseInt(userAmount.value);
-  //Total expense (existing + new)
+  // Total expense (existing + new)
   let sum = parseInt(expenditureValue.innerText) + expenditure;
   expenditureValue.innerText = sum;
-  //Total balance(budget - total expense)
+  // Total balance (budget - total expense)
   const totalBalance = tempAmount - sum;
   balanceValue.innerText = totalBalance;
-  //Create list
+  // Create list
   listCreator(productTitle.value, userAmount.value);
-  //Empty inputs
+  // Empty inputs
   productTitle.value = "";
   userAmount.value = "";
+  
+  // Update Pie Chart
+  updateChart();
 });
+
+// Function to Update Pie Chart
+function updateChart() {
+  const labels = Array.from(list.querySelectorAll('.product')).map(item => item.innerText);
+  const amounts = Array.from(list.querySelectorAll('.amount')).map(item => parseInt(item.innerText));
+  
+  if (myChart) {
+    myChart.data.labels = labels;
+    myChart.data.datasets[0].data = amounts;
+    myChart.update();
+  } else {
+    myChart = new Chart(document.getElementById('expenseChart'), {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Expenses',
+          data: amounts,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 2,
+          hoverOffset: 10
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: 'right',
+          }
+        }
+      }
+    });
+  }
+}
+
+let myChart = null; // Chart instance

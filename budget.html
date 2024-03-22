@@ -13,21 +13,32 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js" defer></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js" defer></script>
+    <script src="./logic/mouse.js" defer></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/budget.css" />
+    <style>
+      .hide {
+          display: none;
+      }
+  </style>
 
   </head>
   <body>
 
     <div class="container">
         <nav>
-            <div class='logo'>FT</div>
+            <div class='logo magnet'>FT</div>
             <div class="links">
                 <ul>
-                    <button ><a href="./index.html">Home</a></button>
-                    <button class="lessons"><a href="./lessons.html">Lessons</a></button>
-                    <button ><a href="./news.html">News</a></button>
+                    <button class="magnet"><a href="./index.html">Home</a></button>
+                    <button class="lessons magnet"><a href="./lessons.html">Lessons</a></button>
+                    <button class="magnet"><a href="./news.html">News</a></button>
                 </ul>
             </div>
         </nav>
@@ -35,8 +46,8 @@
 
 <!-- button section -->
         <div class="calculatorchange">
-            <button><a href="./calculator.html">Loan/EMI calculator</a></button>
-            <button><a href="#">Budget calculator</a></button>
+            <button class="magnet"><a href="./calculator.html">Loan/EMI calculator</a></button>
+            <button class="magnet"><a href="#">Budget calculator</a></button>
         </div>
 
         </div>
@@ -55,7 +66,7 @@
               id="total-amount"
               placeholder="Enter Total Amount"
             />
-            <button class="submit" id="total-amount-button">Set Budget</button>
+            <button class="submit magnet" id="total-amount-button">Set Budget</button>
           </div>
 
           <!-- Expenditure -->
@@ -75,7 +86,7 @@
               id="user-amount"
               placeholder="Enter Cost of Product"
             />
-            <button class="submit" id="check-amount">Check Amount</button>
+            <button class="submit magnet" id="check-amount">Check Amount</button>
           </div>
         </div>
         <!-- Output -->
@@ -99,8 +110,13 @@
         <h3>Expense List</h3>
         <div class="list-container" id="list"></div>
       </div>
+
+
+      <canvas id="expenseChart"></canvas>
+
     </div>
     <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./logic/budget.js"></script>
   </body>
 </html>

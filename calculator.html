@@ -10,17 +10,25 @@
     />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js" defer></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js" defer></script>
+    <script src="./logic/mouse.js" defer></script>
     <script src="./logic/calculator.js" defer></script>
 </head>
 <body>
     <div class="container">
         <nav>
-            <div class='logo'>FT</div>
+            <div class='logo magnet'>FT</div>
             <div class="links">
                 <ul>
-                    <button ><a href="./index.html">Home</a></button>
-                    <button class="lessons"><a href="./lessons.html">Lessons</a></button>
-                    <button ><a href="./news.html">News</a></button>
+                    <button 
+                    class="magnet"><a href="./index.html">Home</a></button>
+                    <button class="lessons magnet"><a href="./lessons.html">Lessons</a></button>
+                    <button 
+                    class="magnet" ><a href="./news.html">News</a></button>
                 </ul>
             </div>
         </nav>
@@ -28,15 +36,17 @@
 
 <!-- button section -->
         <div class="calculatorchange">
-            <button><a href="#">Loan/EMI calculator</a></button>
-            <button><a href="./budget.html">Budget calculator</a></button>
+            <button 
+            class="magnet"><a href="#">EMI calculator</a></button>
+            <button 
+            class="magnet"><a href="./budget.html">Budget calculator</a></button>
         </div>
 
 
 
         <div class="main " >
             <div class="data">
-                <h3 style="font-size: 30px; padding-bottom:10px;">Loan/EMI calculator</h3>
+                <h3 style="font-size: 30px; padding-bottom:10px;">EMI calculator</h3>
                 <p>Input your loan amount , loan duration , lone interest </p>
 
                 <label for="amount">Lone amount(in Rupees)</label>
@@ -61,7 +71,7 @@
                     <h2 class="totalInterest"></h3>
                 </div>
 
-                <button class="calculate" >Calculate</button>
+                <button class="calculate magnet" >Calculate</button>
             </div>
         </div>
 

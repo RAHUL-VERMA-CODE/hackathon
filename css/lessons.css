@@ -160,3 +160,13 @@ html{
 #section1{
     display: block;
 }
+
+
+.awareness button {
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgb(248, 100, 100);
+    border-radius: 50px;
+    outline: none;
+    border: 0.5px solid red;
+}

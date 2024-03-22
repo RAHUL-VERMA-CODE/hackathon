@@ -8,8 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js" defer></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js" defer></script> <!-- Recommended -->
+    <script src="./logic/mouse.js" defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./logic/script.js" defer></script>
     <script src="./logic/animation.js" defer></script>
@@ -17,12 +22,12 @@
 <body>
     <div class="container">
         <nav>
-            <div class='logo'>FT</div>
+            <div class='logo magnet'>FT</div>
             <div class="links">
                 <ul>
-                    <button class="lessons"><a href="./lessons.html">Lessons</a></button>
-                    <button ><a href="./news.html">News</a></button>
-                    <button><a href="./calculator.html">Calculator</a></button>
+                    <button class="lessons magnet"><a href="./lessons.html">Lessons</a></button>
+                    <button class="magnet"><a href="./news.html">News</a></button>
+                    <button class="magnet"><a href="./calculator.html">Calculator</a></button>
                 </ul>
             </div>
         </nav>
@@ -32,7 +37,7 @@
             <div class="title">
                 <h1>Empower Your Finances: A Journey to Financial Literacy</h1>
                 <p>Discover finance essentials. Learn, grow, achieve financial goals with expert guidance.</p>
-                <button><a href="./lessons.html">Get Started</a></button>
+                <button class="magnet"><a href="./lessons.html">Get Started</a></button>
             </div>
             <video src="./assets/widener_ambient-1920.mp4" autoplay loop muted></video>
         </div>
